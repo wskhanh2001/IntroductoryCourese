@@ -1,0 +1,52 @@
+{
+  "pages": [
+      "pages/index/index",
+    "pages/logs/logs",
+    
+      
+    "pages/gzh/gzh",
+    "pages/message/message",
+  
+    "pages/new/new",
+    "pages/switch/switch"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#DF3031",
+    "navigationBarTitleText": "懂你",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#DF3031",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "贴表情",
+        "iconPath": "pages/picture/camera.png",
+        "selectedIconPath": "pages/picture/camera.png"
+      },
+      {
+        "pagePath": "pages/new/new",
+        "text": "情绪记录",
+        "iconPath": "pages/picture/personal.png",
+        "selectedIconPath": "pages/picture/personal.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "聊一聊",
+        "iconPath": "pages/picture/message.png",
+        "selectedIconPath": "pages/picture/message.png"
+      },
+      {
+        "pagePath": "pages/gzh/gzh",
+        "text": "公众号",
+        "iconPath": "pages/picture/ourgzh.png",
+        "selectedIconPath": "pages/picture/ourgzh.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

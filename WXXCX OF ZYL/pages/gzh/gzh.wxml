@@ -1,0 +1,12 @@
+<view class="ServiceCenter">
+<radio-group class="radio-group" bindchange="radioChange" >
+    
+    <view class="container">
+    <view>你现在最想以哪种方式舒缓心情？</view>
+    <radio  wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+        <view>{{item.value}}</view>
+    </radio>
+    </view>
+</radio-group>
+<button bindtap="submit" class="goodbutton">去舒缓情绪</button>
+</view>

@@ -1,0 +1,18 @@
+
+<wxs module="filters" src="../new/new.wxs"></wxs>
+
+<view class='ServiceCenter'>
+
+ <open-data  type="userAvatarUrl" class="userinfo-avatar" mode="cover"></open-data>
+ <canvas canvas-id="mypie" style="width:200px;height:200px;"></canvas>
+ <view class="red">angry:{{filters.toFix(angernumbercpy)}}%</view>
+ <view class="green">disgust:{{filters.toFix(disgustnumbercpy)}}%</view>
+ <view class="purple">fear:{{filters.toFix(fearnumbercpy)}}%</view>
+<view class="mgreen">happiness:{{filters.toFix(happinessnumbercpy)}}%</view>
+<view class="yellow">neutral:{{filters.toFix(neutralnumbercpy)}}%</view>
+<view class="gray">sadness:{{filters.toFix(sadnessnumbercpy)}}%</view>
+<view class="mpurple">surprise:{{filters.toFix(surprisenumbercpy)}}%</view>
+
+</view>
+
+   

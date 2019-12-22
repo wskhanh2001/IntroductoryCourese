@@ -1,0 +1,10 @@
+<!--pages/switch/switch.wxml-->
+<view class="ServiceCenter">
+<view class="container">
+
+<image class="beautiful" src="../picture/gzh.jpg"></image>
+<view>请关注公众号</view>
+<view bindtap="to" class="nomal">返回</view>
+</view>
+</view>
+    
