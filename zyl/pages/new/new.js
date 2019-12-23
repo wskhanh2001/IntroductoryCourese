@@ -1,5 +1,6 @@
 
 Page({
+  //储存画图与显示需要的百分比
   data: {
     angernumbercpy: 0,
     disgustnumbercpy: 0,
@@ -12,6 +13,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     var app=getApp()
+    //计算百分比
     that.setData({
       angernumbercpy: app.data.angernumber / (app.data.angernumber + app.data.disgustnumber + app.data.fearnumber + app.data.happinessnumber + app.data.neutralnumber + app.data.sadnessnumber + app.data.surprisenumber),
       disgustnumbercpy: app.data.disgustnumber / (app.data.angernumber + app.data.disgustnumber + app.data.fearnumber + app.data.happinessnumber + app.data.neutralnumber + app.data.sadnessnumber + app.data.surprisenumber),
@@ -21,6 +23,7 @@ Page({
       sadnessnumbercpy: app.data.sadnessnumber / (app.data.angernumber + app.data.disgustnumber + app.data.fearnumber + app.data.happinessnumber + app.data.neutralnumber + app.data.sadnessnumber + app.data.surprisenumber),
       surprisenumbercpy: app.data.surprisenumber / (app.data.angernumber + app.data.disgustnumber + app.data.fearnumber + app.data.happinessnumber + app.data.neutralnumber + app.data.sadnessnumber + app.data.surprisenumber),
     })
+    //每0.5s刷新一次饼状图
     setInterval(function () {
       console.log("again")
       that.f()
@@ -34,11 +37,11 @@ Page({
 
 
 
-
-
+//画饼状图
     f: function() {
       var that=this;
       var app = getApp()
+       //更新百分比
       that.setData({
         angernumbercpy: app.data.angernumber / (app.data.angernumber + app.data.disgustnumber + app.data.fearnumber + app.data.happinessnumber + app.data.neutralnumber + app.data.sadnessnumber + app.data.surprisenumber),
         disgustnumbercpy: app.data.disgustnumber / (app.data.angernumber + app.data.disgustnumber + app.data.fearnumber + app.data.happinessnumber + app.data.neutralnumber + app.data.sadnessnumber + app.data.surprisenumber),
@@ -97,50 +100,4 @@ wx.drawCanvas({
   actions: context.getActions()
 });
 },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  buttonStart: function (e) {
-    startPoint = e.touches[0]
-  },
-  buttonMove: function (e) {
-    var endPoint = e.touches[e.touches.length - 1]
-    var translateX = endPoint.clientX - startPoint.clientX
-    var translateY = endPoint.clientY - startPoint.clientY
-    startPoint = endPoint
-    var buttonTop = this.data.buttonTop + translateY
-    var buttonLeft = this.data.buttonLeft + translateX
-    //判断是移动否超出屏幕
-    if (buttonLeft + 50 >= this.data.windowWidth) {
-      buttonLeft = this.data.windowWidth - 50;
-    }
-    if (buttonLeft <= 0) {
-      buttonLeft = 0;
-    }
-    if (buttonTop <= 0) {
-      buttonTop = 0
-    }
-    if (buttonTop + 50 >= this.data.windowHeight) {
-      buttonTop = this.data.windowHeight - 50;
-    }
-    this.setData({
-      buttonTop: buttonTop,
-      buttonLeft: buttonLeft
-    })
-  },
-  buttonEnd: function (e) {
-
-  },
-  to: function () { wx.navigateTo({ url: 'pages/index/index', }) }
 })

@@ -1,4 +1,33 @@
 
+/*让button出现在固定位置*/
+.cover-view {
+  position: absolute;
+  top: calc(90.5%);
+  left: calc(25%);
+  /* opacity: .7; */
+}
+/*camera样式*/
+.camera{  
+	width: 100%; 
+ 	height: 100%;  
+ 	position: absolute; 
+  	z-index: 1;  
+  	display: flex; 
+  	flex-direction: row;  
+   	justify-content:center;
+   }
+   /*button样式*/
+   .goodbutton {  
+
+     width: 100%;  
+     background-color: rgb(252, 126, 67); 
+      color: white;  
+      border-radius: 98rpx; 
+       background: bg_red;
+   }
+
+
+  /*太多了就不一一注释了*/
 .preview-tips {
   margin: 50rpx 0  30rpx;  
 }
@@ -85,42 +114,3 @@ page {
     margin: 70rpx 50rpx;
     font-size: 35rpx;
 }
-.cover-view {
-  position: absolute;
-  top: calc(90.5%);
-  left: calc(25%);
-  /* opacity: .7; */
-}
-.camera{  
-	width: 100%; 
- 	height: 100%;  
- 	position: absolute; 
-  	z-index: 1;  
-  	display: flex; 
-  	flex-direction: row;  
-   	justify-content:center;
-   }
-   .goodbutton {  
-
-     width: 100%;  
-     background-color: rgb(252, 126, 67); 
-      color: white;  
-      border-radius: 98rpx; 
-       background: bg_red;
-       }
-
- .camera_button{  
-   	width: 100rpx;  
-   	height: 100rpx;
-     	border-radius: 50rpx;
-       	position: absolute;
-       	align-self:flex-end;
-       	bottom: 60rpx;  
-        z-index: 2;  
-        background-color: 
-        white;
-        }
- .camera_button_click{ 
-         background-color: #009944;
-       }
-       

@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+//登陆界面
 Page({
   data: {
     motto: '欢迎使用！',
@@ -49,6 +49,7 @@ Page({
 
 
   },
+  //获取用户信息
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -60,10 +61,16 @@ Page({
   onGotUserInfo: function (e) {
    
   },
+  //跳转进入小程序功能页面
   to: function () {
+    //跳转至在在tabBar中的页面需要用
     wx.switchTab({
       url: '../index/index',
       success(res) {
+        //尝试使用用户登录但是后来放弃想参考可以参考以下代码
+
+
+
         /*var that = this
         wx.login({
           success(r) {

@@ -181,6 +181,7 @@ page {
   font-size: 32rpx;
   line-height: 1.6;
 }
+/*背景*/
 .ServiceCenter{    
 display: flex;
 flex-direction: column;
