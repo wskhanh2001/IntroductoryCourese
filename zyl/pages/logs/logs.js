@@ -18,6 +18,9 @@ Page({
   //事件处理函数
 
   onLoad: function () {
+    wx.showModal({
+      content: "由于上线的微信小程序只能调用https接口，无法调用我们使用的http接口，希望助教能够在开发者工具上体验全功能。"
+    })
     var that=this
     if (app.globalData.userInfo) {
       this.setData({

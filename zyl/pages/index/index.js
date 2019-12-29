@@ -20,7 +20,9 @@ Page({
     emoji: '',//当前表情
   },
   onLoad() {
-    var that = this
+    wx.showModal({
+      content: "由于我们搭建的服务器较小，所以可能会post失败，如果无法贴表情，请助教多点击几次或者联系服务器所有者  汪声康：18811102738。"
+    })
     var that = this
     wx.showLoading({
       title: '努力加载中',
