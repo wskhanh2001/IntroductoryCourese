@@ -1,12 +1,10 @@
 <!--index.wxml-->
+<!--不用登录！-->
 <view class='ServiceCenter'>
 <view class="container">
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="to" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <image bindtap="to" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"><open-data  ></open-data></image>
       <text class="userinfo-nickname">欢迎使用！</text>
-    </block>
   </view>
 </view>
 </view>

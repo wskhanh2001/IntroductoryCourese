@@ -53,14 +53,7 @@ Page({
 
   },
   //获取用户信息
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
+ 
   onGotUserInfo: function (e) {
    
   },
